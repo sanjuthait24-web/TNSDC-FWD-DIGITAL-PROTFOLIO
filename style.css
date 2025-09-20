@@ -1,0 +1,223 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+}
+
+body {
+
+    scroll-behavior: smooth;
+
+}
+
+/* Header */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    background: #333;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    z-index: 1000;
+
+}
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+#nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+}
+
+#nav-links li a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px;
+
+    transition: 0.3s;
+
+}
+
+#nav-links li a:hover,
+
+#nav-links li a.active {
+
+    background: #555;
+
+    border-radius: 5px;
+
+}
+
+#menu-toggle {
+
+    display: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}
+
+/* Sections */
+
+section {
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+#home { background: #00aaff; color: white; }
+
+#about { background: #f0f0f0; }
+
+#projects { background: #ffdd57; }
+
+#contact { background: #f8f9fa; }
+
+/* Project cards */
+
+.project-list {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+.project {
+
+    background: #e74c3c;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+}
+
+/* Contact Form */
+
+#contact-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 300px;
+
+}
+
+#contact-form input,
+
+#contact-form textarea {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    width: 100%;
+
+}
+
+#contact-form button {
+
+    background: #007bff;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+#contact-form button:hover {
+
+    background: #0056b3;
+
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    #nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        background: #333;
+
+        position: absolute;
+
+        top: 50px;
+
+        right: 0;
+
+        width: 200px;
+
+    }
+
+    #nav-links.show {
+
+        display: flex;
+
+    }
+
+    #menu-toggle {
+
+        display: block;
+
+    }
+
+}
